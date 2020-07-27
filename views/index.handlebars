@@ -1,45 +1,50 @@
-<h1>Eat Da Burger!</h1>
-
-<img src="pic_trulli.jpg" alt="Italian Trulli">
-<div id= "devBuger">
-<h2>Burgers to Devour!</h2>
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour = true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div style="padding: 1em;background-color:coral">
+  <h1 class="display-3 text-center">Eat Da Burger!</h1>
+  <div class="row" style="padding: 1em;">
+    <div class="col ">
+      <img src="https://i.pinimg.com/originals/e7/e2/74/e7e27431342dfae60ef651809f21e928.png"
+        class="img-fluid float-right" alt="burgerphoto">
+    </div>
+    <div class="col">
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+        <div class="form-group">
+          <label for="burgerName">Burger Name</label>
+          <input type="text" id="burger" name="name">
+          <br>
+          <input type="radio" name="devoured" value="0" checked>Want to Add!</div>
+        <input type="radio" name="devoured" value="1">Already Devoured<br>
+        <button class="btn btn-outline-dark" type="submit">Add Burger</button>
+      </form>
+    </div>
+  </div>
 </div>
 
-<div id = "notDevBerger">
-<h2> Burger! that are devoured</h2>
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour = false}}
-    {{/if}}
-  {{/each}}
-</ul>
-</div>
-<div id ="addBurger">
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca"Burger Name:</label>
-    <input type="text" id="ca" name="name">
+<div class="container-fluid" style="padding: 1em;">
+  <div class="row">
+    <div class="col border bg-light">
+      <div id="devBurger" style="padding: 1em;">
+        <h2>Burgers to Devour!</h2>
+        <ol class="list-group">
+          {{#each burgers}}
+          {{#unless devoured}}
+          {{> burgers/burger-block devoured = true}}
+          {{/unless}}
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+    <div class="col border">
+      <div id="notDevBerger" style="padding: 1em;">
+        <h2> Burgers Already Devoured</h2>
+        <ol class="list-group">
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> burgers/burger-block devoured = false}}
+          {{/if}}
+          {{/each}}
+        </ol>
+      </div>
+    </div>
   </div>
-
-  <div class="form-group">
-
-    <label for="burgerName">Burger Name</label>
-    <input type ="text" id="burg" name="name">
-    <br>
-    <input type="radio" name="Devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="wantToDevour!" value="0"> Want to Devoured!
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form>
 </div>

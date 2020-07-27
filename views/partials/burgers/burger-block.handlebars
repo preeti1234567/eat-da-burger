@@ -1,0 +1,14 @@
+<li class="list-group-item">
+	{{name}}
+
+	{{#if devoured}}
+	<button class="change-devoured btn btn-outline-success" data-id="{{id}}" data-devoured="1" data-name="{{name}}">
+		DEVOUR IT!
+	</button>
+	{{else}}
+	<button class="delete btn btn-outline-danger" data-id="{{id}}">
+		DELETE IT!
+	</button>
+	{{/if}}
+
+</li>

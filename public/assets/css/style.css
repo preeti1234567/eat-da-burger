@@ -1,36 +1,4 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
-}
-
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
-.form-group {
-  margin-bottom: 5px;
-}
-
-#devBuger{
-  float:left;
-}
-
-#notDevBerger{
-  float:right;
-}
-#addBurger{
-  width:200px; 
-  height:200px; 
-  position: fixed; 
-  top: 20%; 
-  left: 50%; 
-  margin-top: -100px; 
-  margin-left: -100px;
+img{
+  width:20%;
+  height: 20%;
 }
