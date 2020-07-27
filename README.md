@@ -1,4 +1,4 @@
-# NodeExpressHandlebars
+# Eat-de-Burger
 
  The purpose of this project is to create a burger logger using MVC design pattern with MySQL, Node, Express, Handlebars and ORM.
 
